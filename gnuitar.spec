@@ -1,6 +1,6 @@
 %define name	gnuitar
 %define version	0.3.2
-%define release %mkrel 3
+%define release %mkrel 4
 
 Name:		%{name}
 Summary:	Real-time guitar effects
@@ -11,7 +11,7 @@ Source1: 	%{name}48.png
 Source2: 	%{name}32.png
 Source3: 	%{name}16.png
 URL:		http://www.gnuitar.com/
-License:	GPL
+License:	GPLv2+
 Group:		Sound
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires:	gtk2-devel
@@ -43,11 +43,6 @@ rm -rf %{buildroot}
 %makeinstall
 
 #menu
-mkdir -p %{buildroot}%{_menudir}
-cat << EOF > %{buildroot}%{_menudir}/%{name}
-?package(%{name}): command="%{name}" icon="%{name}.png" needs="x11" title="GNUitar" longtitle="Guitar effects" section="Multimedia/Sound" xdg="true"
-EOF
-
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
 cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-%{name}.desktop << EOF
 [Desktop Entry]
@@ -57,17 +52,16 @@ Exec=%{_bindir}/%{name}
 Icon=%{name}
 Terminal=false
 Type=Application
-Categories=GTK;X-MandrivaLinux-Multimedia-Sound;AudioVideo;Audio;
-Encoding=UTF-8
+Categories=GTK;AudioVideo;Audio;AudioVideoEditing;
 EOF
 
 #icons
 mkdir -p %{buildroot}/%_liconsdir
-cat %SOURCE1 > %{buildroot}/%_liconsdir/%name.png
+cp %SOURCE1  %{buildroot}/%_liconsdir/%name.png
 mkdir -p %{buildroot}/%_iconsdir
-cat %SOURCE2 > %{buildroot}/%_iconsdir/%name.png
+cp %SOURCE2  %{buildroot}/%_iconsdir/%name.png
 mkdir -p %{buildroot}/%_miconsdir
-cat %SOURCE3 > %{buildroot}/%_miconsdir/%name.png
+cp %SOURCE3  %{buildroot}/%_miconsdir/%name.png
 
 # house cleaning
 rm -rf %{buildroot}%{_datadir}/doc
@@ -86,10 +80,8 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %doc README AUTHORS ChangeLog COPYING docs/*.html FAQ NEWS TODO
 %attr(4755,root,root) %{_bindir}/%name
-%{_menudir}/%name
 %{_datadir}/applications/mandriva-%{name}.desktop
 %defattr(0644,root,root,755)
 %{_liconsdir}/%name.png
 %{_iconsdir}/%name.png
 %{_miconsdir}/%name.png
-
