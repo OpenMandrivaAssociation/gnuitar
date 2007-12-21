@@ -13,6 +13,7 @@ Source3: 	%{name}16.png
 URL:		http://www.gnuitar.com/
 License:	GPLv2+
 Group:		Sound
+BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires:	gtk2-devel
 
 %description
