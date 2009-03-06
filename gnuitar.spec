@@ -1,6 +1,6 @@
 %define name	gnuitar
 %define version	0.3.2
-%define release %mkrel 6
+%define release %mkrel 7
 
 Name:		%{name}
 Summary:	Real-time guitar effects
@@ -43,12 +43,12 @@ rm -rf %{buildroot}
 %makeinstall
 
 #menu
-mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
-cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-%{name}.desktop << EOF
+mkdir -p %{buildroot}%{_datadir}/applications
+cat > %{buildroot}%{_datadir}/applications/mandriva-%{name}.desktop << EOF
 [Desktop Entry]
 Name=%{name}
 Comment=%{summary}
-Exec=%{_bindir}/%{name}
+Exec=%{_bindir}/pasuspender %{_bindir}/%{name}
 Icon=%{name}
 Terminal=false
 Type=Application
