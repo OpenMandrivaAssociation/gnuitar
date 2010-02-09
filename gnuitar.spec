@@ -1,16 +1,16 @@
-%define name	gnuitar
-%define version	0.3.2
-%define release %mkrel 8
+%define	name	gnuitar
+%define	version	0.3.2
+%define	release	%mkrel 9
 
 Name:		%{name}
 Summary:	Real-time guitar effects
 Version:	%{version}
 Release:	%{release}
 Source0:	%{name}-%{version}.tar.bz2
-Source1: 	%{name}48.png
-Source2: 	%{name}32.png
-Source3: 	%{name}16.png
-URL:		http://www.gnuitar.com/
+Source1:	%{name}48.png
+Source2:	%{name}32.png
+Source3:	%{name}16.png
+URL:		http://sourceforge.net/projects/gnuitar/files/
 License:	GPLv2+
 Group:		Sound
 BuildRoot:	%{_tmppath}/%{name}-buildroot
