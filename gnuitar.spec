@@ -1,6 +1,6 @@
 %define	name	gnuitar
 %define	version	0.3.2
-%define	release	%mkrel 9
+%define	release	%mkrel 10
 
 Name:		%{name}
 Summary:	Real-time guitar effects
