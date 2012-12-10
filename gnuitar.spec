@@ -89,3 +89,69 @@ rm -rf %{buildroot}
 %{_liconsdir}/%name.png
 %{_iconsdir}/%name.png
 %{_miconsdir}/%name.png
+
+
+%changelog
+* Sun Dec 05 2010 Oden Eriksson <oeriksson@mandriva.com> 0.3.2-10mdv2011.0
++ Revision: 610954
+- rebuild
+
+* Tue Feb 09 2010 Sandro Cazzaniga <kharec@mandriva.org> 0.3.2-9mdv2010.1
++ Revision: 502945
+- Fix url and clean spec file
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - rebuild
+
+* Fri Mar 06 2009 Emmanuel Andry <eandry@mandriva.org> 0.3.2-7mdv2009.1
++ Revision: 350228
+- launch gnuitar through pasuspender, needs exclusive hardware access throug OSS
+
+* Thu Jul 24 2008 Thierry Vignaud <tv@mandriva.org> 0.3.2-6mdv2009.0
++ Revision: 246494
+- rebuild
+- kill re-definition of %%buildroot on Pixel's request
+
+  + Pixel <pixel@mandriva.com>
+    - rpm filetriggers deprecates update_menus/update_scrollkeeper/update_mime_database/update_icon_cache/update_desktop_database/post_install_gconf_schemas
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+* Fri Dec 14 2007 Funda Wang <fwang@mandriva.org> 0.3.2-4mdv2008.1
++ Revision: 119617
+- drop old menu
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - import gnuitar
+
+
+* Sun Sep 11 2006 Emmanuel Andry <eandry@mandriva.org> 0.3.2-3mdv2007.0
+- add forgotten xdg tag
+
+* Sun Sep 03 2006 Emmanuel Andry <eandry@mandriva.org> 0.3.2-2mdv2007.0
+- xdg menu
+- %%mkrel
+
+* Wed May 11 2005 Austin Acton <austin@mandriva.org> 0.3.2-1mdk
+- 0.3.2
+- URL
+- remove patch
+- gtk2
+
+* Tue Aug 5 2003 Austin Acton <aacton@yorku.ca> 0.3.1-2mdk
+- DIRM
+
+* Sun Jul 20 2003 Oden Eriksson <oden.eriksson@kvikkjokk.net> 0.3.1-1mdk
+- 0.3.1
+- added P0
+- misc spec file fixes
+
+* Fri Apr 04 2003 Lenny Cartier <lenny@mandrakesoft.com> 0.3.0-1mdk
+- 0.3.0
+
+* Tue Mar 25 2003 Lenny Cartier <lenny@mandrakesoft.com> 0.2.1-1mdk
+- 0.2.1
+
+* Mon Feb 17 2003 Austin Acton <aacton@yorku.ca> 0.2.0-1mdk
+- initial package
