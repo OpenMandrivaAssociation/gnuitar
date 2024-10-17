@@ -10,7 +10,7 @@ Source0:	%{name}-%{version}.tar.bz2
 Source1:	%{name}48.png
 Source2:	%{name}32.png
 Source3:	%{name}16.png
-URL:		http://sourceforge.net/projects/gnuitar/files/
+URL:		https://sourceforge.net/projects/gnuitar/files/
 License:	GPLv2+
 Group:		Sound
 BuildRoot:	%{_tmppath}/%{name}-buildroot
